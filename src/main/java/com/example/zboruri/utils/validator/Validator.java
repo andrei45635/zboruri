@@ -1,2 +1,5 @@
-package com.example.zboruri.utils.validator;public interface Validator {
+package com.example.zboruri.utils.validator;
+
+public interface Validator<T>{
+    void validate(T t);
 }

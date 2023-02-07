@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="515.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zboruri.controller.ClientsController">
+   <children>
+      <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="188.0" layoutY="14.0" prefHeight="17.0" prefWidth="249.0" text="Label" />
+      <TableView fx:id="flightTableView" layoutY="49.0" prefHeight="211.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="fromColumn" prefWidth="112.0" text="from" />
+            <TableColumn fx:id="toColumn" prefWidth="115.0" text="to" />
+            <TableColumn fx:id="departureColumn" prefWidth="148.0" text="departure" />
+            <TableColumn fx:id="arrivalColumn" prefWidth="188.0" text="arrival" />
+            <TableColumn fx:id="seatsColumn" prefWidth="36.0" text="seats" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="departureDatePicker" layoutX="22.0" layoutY="294.0" />
+      <Label layoutX="209.0" layoutY="298.0" prefHeight="17.0" prefWidth="88.0" text="Departure date" />
+      <ComboBox fx:id="fromComboBox" layoutX="33.0" layoutY="395.0" prefWidth="150.0" />
+      <ComboBox fx:id="toComboBox" layoutX="408.0" layoutY="395.0" prefWidth="150.0" />
+      <Label layoutX="33.0" layoutY="369.0" text="from" />
+      <Label layoutX="408.0" layoutY="369.0" text="to" />
+      <Button fx:id="findFlightsButton" layoutX="258.0" layoutY="446.0" mnemonicParsing="false" onAction="#onClickFindFlight" text="Find Flights" />
+      <Label fx:id="warningFlightLabel" alignment="CENTER" layoutX="80.0" layoutY="267.0" prefHeight="17.0" prefWidth="426.0" textFill="RED" />
+   </children>
 </AnchorPane>
